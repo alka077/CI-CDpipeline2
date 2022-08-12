@@ -53,7 +53,7 @@ make all
     
 Create an App Service in Azure. In this example the App Service is cicd-nanodegree-haneen and the resource group is flask-app, you can either create it using Azure cloudShell or the portal itself. In the Azure cloudShell type:
 
-* az webapp up -n cicd-nanodegree-haneen -g flask-app
+* az webapp up --resource-group Azuredevops --name udacitywebapp --loaction eastus 
 * Next, create the pipeline in Azure DevOps. More information on this process can be found here. The basic steps to set up the pipeline are:
 
 * Go to https://dev.azure.com and sign in.
