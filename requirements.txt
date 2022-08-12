@@ -1,7 +1,8 @@
 Flask==1.0.2
 pandas==0.24.2
 scikit-learn==0.20.3
-scipy
-matplotlib
-pytest
-pylint
+jinja2>=2.10
+MarkUpSafe==2.0.1
+matplotlib==3.5.3
+pytest==6.2.2
+pylint==2.3.1
