@@ -49,16 +49,16 @@ make all
 ![github action build](https://user-images.githubusercontent.com/106584802/184397570-17d08e0e-0e26-4185-af11-a2dab43d3630.PNG)
 
 
-* Deploying the app as a web server using Azure App Service.
+# Deploying the app as a web server using Azure App Service.
     
-    Create an App Service in Azure. In this example the App Service is cicd-nanodegree-haneen and the resource group is flask-app, you can either create it using Azure cloudShell or the portal itself. In the Azure cloudShell type:
+Create an App Service in Azure. In this example the App Service is cicd-nanodegree-haneen and the resource group is flask-app, you can either create it using Azure cloudShell or the portal itself. In the Azure cloudShell type:
 
-az webapp up -n cicd-nanodegree-haneen -g flask-app
-Next, create the pipeline in Azure DevOps. More information on this process can be found here. The basic steps to set up the pipeline are:
+* az webapp up -n cicd-nanodegree-haneen -g flask-app
+* Next, create the pipeline in Azure DevOps. More information on this process can be found here. The basic steps to set up the pipeline are:
 
-Go to https://dev.azure.com and sign in.
-Create a new private project. -Create a new service connection to Azure Resource Manager, select subscription and the app service.
-Create a new pipeline linked to your GitHub repo using GiThub YAML File.
+* Go to https://dev.azure.com and sign in.
+* Create a new private project. -Create a new service connection to Azure Resource Manager, select subscription and the app service.
+* Create a new pipeline linked to your GitHub repo using GiThub YAML File.
 
 ![make_prediction](https://user-images.githubusercontent.com/106584802/184398667-401105b8-78d5-4a12-a49a-444a6dfb7882.PNG)
 
