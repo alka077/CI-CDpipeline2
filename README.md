@@ -1,6 +1,13 @@
 # Overview
 
-<TODO: complete this with an overview of your project>
+This project consists of flask application that is developed to predict housing prices in Boston (the model is already created by the instructor).
+
+This repositry demonstrate:
+
+* Deploying the app in Azure CloudShell
+* Deploying the app as a web server using Azure App Service.
+
+Once anything has been changed (commits) in the github repositry, it will trigger an action for test automation (CI). A pipeline has been created using Azure DevOps tool, and also any changes will be tested in the pipeline and deployed to app service. All these steps are explianed well in the demo below.
 
 ## Project Plan
 <TODO: Project Plan
@@ -10,20 +17,50 @@
 
 ## Instructions
 
-<TODO:  
-* Architectural Diagram (Shows how key parts of the system work)>
+* Architectural Diagram 
 
-<TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
+[github architecture](https://user-images.githubusercontent.com/106584802/184396323-51fb2546-579e-4ef3-b4a1-47acb5722cb0.PNG)
 
-* Project running on Azure App Service
+![architecture](https://user-images.githubusercontent.com/106584802/184396550-01254e7c-5ec3-4b77-8029-d14df6bbcc64.PNG)
 
-* Project cloned into Azure Cloud Shell
+# Deploying the app in Azure CloudShell
 
-* Passing tests that are displayed after running the `make all` command from the `Makefile`
+ * Azure Cloud Shell, clone the repo:
+    git clone <repo ssh url>
+    
+  ![git clone cloud shell](https://user-images.githubusercontent.com/106584802/184396918-0e394417-7c62-4e37-b161-02d2e6bf16d5.PNG)
 
-* Output of a test run
+Create a virtual environment:
 
-* Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
+python3 -m venv ~/.myrepo
+Activate the virtual environment:
+
+source ~/.myrepo/bin/activate
+Change into the new directory:
+
+cd udacity-azure-cicd
+Install dependencies in the virtual environment and run tests:
+
+make all
+
+![make all](https://user-images.githubusercontent.com/106584802/184397145-af367adc-cab9-4ab4-ba77-c5e3d444e90f.PNG)
+
+
+![github action build](https://user-images.githubusercontent.com/106584802/184397570-17d08e0e-0e26-4185-af11-a2dab43d3630.PNG)
+
+
+* Deploying the app as a web server using Azure App Service.
+
+![make_prediction](https://user-images.githubusercontent.com/106584802/184398667-401105b8-78d5-4a12-a49a-444a6dfb7882.PNG)
+
+
+![udacityweapp net](https://user-images.githubusercontent.com/106584802/184397286-ebe63c91-75f8-4554-b22a-e66cfa7c4577.PNG)
+
+
+![make_predict](https://user-images.githubusercontent.com/106584802/184399171-73c74b17-9e20-4e4b-9a17-bd86f97e2947.PNG)
+
+
+
 
 * Running Azure App Service from Azure Pipelines automatic deployment
 
