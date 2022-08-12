@@ -10,16 +10,16 @@ This repositry demonstrate:
 Once anything has been changed (commits) in the github repositry, it will trigger an action for test automation (CI). A pipeline has been created using Azure DevOps tool, and also any changes will be tested in the pipeline and deployed to app service. All these steps are explianed well in the demo below.
 
 ## Project Plan
-<TODO: Project Plan
 
-* A link to a Trello board for the project
-* A link to a spreadsheet that includes the original and final project plan>
+* A link to a Trello board for the project https://trello.com/b/agz2gagW/udacity
+* A link to a spreadsheet that includes the original and final project plan [project-management-template (1).xlsx](https://github.com/alka077/CI-CDpipeline2/files/9328481/project-management-template.1.xlsx)
+
 
 ## Instructions
 
 * Architectural Diagram 
 
-[github architecture](https://user-images.githubusercontent.com/106584802/184396323-51fb2546-579e-4ef3-b4a1-47acb5722cb0.PNG)
+![github architecture](https://user-images.githubusercontent.com/106584802/184396323-51fb2546-579e-4ef3-b4a1-47acb5722cb0.PNG)
 
 ![architecture](https://user-images.githubusercontent.com/106584802/184396550-01254e7c-5ec3-4b77-8029-d14df6bbcc64.PNG)
 
@@ -50,6 +50,15 @@ make all
 
 
 * Deploying the app as a web server using Azure App Service.
+    
+    Create an App Service in Azure. In this example the App Service is cicd-nanodegree-haneen and the resource group is flask-app, you can either create it using Azure cloudShell or the portal itself. In the Azure cloudShell type:
+
+az webapp up -n cicd-nanodegree-haneen -g flask-app
+Next, create the pipeline in Azure DevOps. More information on this process can be found here. The basic steps to set up the pipeline are:
+
+Go to https://dev.azure.com and sign in.
+Create a new private project. -Create a new service connection to Azure Resource Manager, select subscription and the app service.
+Create a new pipeline linked to your GitHub repo using GiThub YAML File.
 
 ![make_prediction](https://user-images.githubusercontent.com/106584802/184398667-401105b8-78d5-4a12-a49a-444a6dfb7882.PNG)
 
@@ -59,30 +68,23 @@ make all
 
 ![make_predict](https://user-images.githubusercontent.com/106584802/184399171-73c74b17-9e20-4e4b-9a17-bd86f97e2947.PNG)
 
-
-
-
 * Running Azure App Service from Azure Pipelines automatic deployment
+    
+    ![Azure pipelines](https://user-images.githubusercontent.com/106584802/184400414-6f425631-8ca7-47c0-b909-ee35298dba8a.PNG)
 
-* Successful prediction from deployed flask app in Azure Cloud Shell.  [Use this file as a template for the deployed prediction](https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C2-AgileDevelopmentwithAzure/project/starter_files/flask-sklearn/make_predict_azure_app.sh).
-The output should look similar to this:
 
-```bash
-udacity@Azure:~$ ./make_predict_azure_app.sh
-Port: 443
-{"prediction":[20.35373177134412]}
-```
 
 * Output of streamed log files from deployed application
+    
+    ![log Stream](https://user-images.githubusercontent.com/106584802/184400357-a946a8fd-4cfd-4586-92aa-ccef7244620e.PNG)
 
-> 
 
 ## Enhancements
 
-<TODO: A short description of how to improve the project in the future>
+to build an image of the app and push to an image registry(e.g acr) and then do a containerized deployment. The app could be deployed to a kubernetes cluster 
 
 ## Demo 
 
-<TODO: Add link Screencast on YouTube>
+(https://www.youtube.com/watch?v=wOxy6o2dDhM)
 
 
