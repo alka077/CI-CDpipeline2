@@ -1,5 +1,7 @@
 # Overview
 
+[![Python application test with Github Actions](https://github.com/alka077/CI-CDpipeline2/actions/workflows/pythonapp.yml/badge.svg)](https://github.com/alka077/CI-CDpipeline2/actions/workflows/pythonapp.yml)
+
 This project consists of flask application that is developed to predict housing prices in Boston (the model is already created by the instructor).
 
 This repositry demonstrate:
